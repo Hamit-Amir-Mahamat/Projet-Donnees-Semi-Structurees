@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statuts>
+    <statut>
+        <user_id>1</user_id>
+        <status>online</status>
+        <last_seen>2024-01-01 10:30:00</last_seen>
+    </statut>
+    <statut>
+        <user_id>2</user_id>
+        <status>online</status>
+        <last_seen>2024-01-01 10:29:00</last_seen>
+    </statut>
+    <statut>
+        <user_id>3</user_id>
+        <status>offline</status>
+        <last_seen>2024-01-01 10:25:00</last_seen>
+    </statut>
+    <statut>
+        <user_id>687488c6c76ee</user_id>
+        <status>online</status>
+        <last_seen>2025-07-22 19:48:21</last_seen>
+    </statut>
+    <statut>
+        <user_id>68748b00ae7d0</user_id>
+        <status>online</status>
+        <last_seen>2025-07-14 17:31:31</last_seen>
+    </statut>
+    <statut>
+        <user_id>6875053bddbaf</user_id>
+        <status>online</status>
+        <last_seen>2025-07-14 17:31:26</last_seen>
+    </statut>
+    <statut>
+        <user_id>68748ea611176</user_id>
+        <status>online</status>
+        <last_seen>2025-07-14 16:56:23</last_seen>
+    </statut>
+    <statut>
+        <user_id>68751eedae652</user_id>
+        <status>online</status>
+        <last_seen>2025-07-22 15:57:35</last_seen>
+    </statut>
+    <statut>
+        <user_id>ibrahima12345</user_id>
+        <status>online</status>
+        <last_seen>2025-07-22 22:13:42</last_seen>
+    </statut>
+    <statut>
+        <user_id>aicha12345</user_id>
+        <status>online</status>
+        <last_seen>2025-07-22 19:48:20</last_seen>
+    </statut>
+    <statut>
+        <user_id>bonco12345</user_id>
+        <status>online</status>
+        <last_seen>2025-07-15 18:47:36</last_seen>
+    </statut>
+    <statut>
+        <user_id>687dcda81ffaf</user_id>
+        <status>online</status>
+        <last_seen>2025-07-21 23:35:12</last_seen>
+    </statut>
+    <statut>
+        <user_id>687ddc7c88940</user_id>
+        <status>online</status>
+        <last_seen>2025-07-21 08:25:33</last_seen>
+    </statut>
+    <statut>
+        <user_id>687e13cc7b094</user_id>
+        <status>online</status>
+        <last_seen>2025-07-21 13:02:11</last_seen>
+    </statut>
+    <statut>
+        <user_id>687f6b74648ee</user_id>
+        <status>online</status>
+        <last_seen>2025-07-22 15:19:34</last_seen>
+    </statut>
+    <statut>
+        <user_id>isaac12345</user_id>
+        <status>online</status>
+        <last_seen>2025-07-22 15:57:29</last_seen>
+    </statut>
+    <statut>
+        <user_id>687fac3131158</user_id>
+        <status>online</status>
+        <last_seen>2025-07-22 17:53:19</last_seen>
+    </statut>
+</statuts>

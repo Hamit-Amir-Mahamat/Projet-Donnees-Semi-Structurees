@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp - Plateforme de Discussions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            height: 90vh;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 350px;
+            background: #f8f9fa;
+            border-right: 1px solid #e9ecef;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background: #075e54;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #25d366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .menu-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .menu-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .search-bar {
+            padding: 15px;
+            background: white;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: white;
+            color: #075e54;
+            font-weight: bold;
+        }
+
+        .contacts-list {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .contact-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: background 0.3s;
+        }
+
+        .contact-item:hover {
+            background: #f5f5f5;
+        }
+
+        .contact-item.active {
+            background: #e7f3ff;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-name {
+            font-weight: bold;
+            margin-bottom: 3px;
+            font-size: 16px;
+        }
+
+        .contact-last-message {
+            color: #666;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .contact-time {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            padding: 15px 20px;
+            background: #075e54;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .chat-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .messages-container {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #e5ddd5;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            max-width: 60%;
+            padding: 10px 15px;
+            border-radius: 10px;
+            position: relative;
+            word-wrap: break-word;
+        }
+
+        .message.sent {
+            align-self: flex-end;
+            background: #dcf8c6;
+            border-bottom-right-radius: 5px;
+        }
+
+        .message.received {
+            align-self: flex-start;
+            background: white;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message-time {
+            font-size: 11px;
+            color: #666;
+            margin-top: 5px;
+            text-align: right;
+        }
+
+        .message-input-container {
+            padding: 15px 20px;
+            background: white;
+            border-top: 1px solid #e9ecef;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .message-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .send-btn, .file-btn {
+            background: #075e54;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .send-btn:hover, .file-btn:hover {
+            background: #064e47;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .btn {
+            background: #075e54;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #064e47;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .group-members {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .member-item {
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .member-item input[type="checkbox"] {
+            width: auto;
+        }
+
+        .online-status {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #25d366;
+            border: 2px solid white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .avatar-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .file-message {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .file-icon {
+            width: 40px;
+            height: 40px;
+            background: #075e54;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .file-info {
+            flex: 1;
+        }
+
+        .file-name {
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .file-size {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .empty-chat {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #666;
+            text-align: center;
+        }
+
+        .empty-chat h3 {
+            margin-bottom: 10px;
+            color: #075e54;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                height: 100vh;
+                border-radius: 0;
+            }
+            
+            .sidebar {
+                width: 100%;
+                position: absolute;
+                z-index: 100;
+                height: 100%;
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <div class="avatar-container">
+                        <div class="avatar" id="userAvatar">U</div>
+                        <div class="online-status"></div>
+                    </div>
+                    <div>
+                        <div id="userName">Utilisateur</div>
+                        <div style="font-size: 12px; opacity: 0.8;">En ligne</div>
+                    </div>
+                </div>
+                <div class="menu-buttons">
+                    <button class="menu-btn" onclick="openProfileModal()" title="Profil">
+                        👤
+                    </button>
+                    <button class="menu-btn" onclick="openSettingsModal()" title="Paramètres">
+                        ⚙️
+                    </button>
+                    <button class="menu-btn" onclick="toggleSidebar()" title="Menu">
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Rechercher une conversation..." id="searchInput">
+            </div>
+
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('chats')" id="chatsTab">Discussions</button>
+                <button class="tab" onclick="switchTab('contacts')" id="contactsTab">Contacts</button>
+                <button class="tab" onclick="switchTab('groups')" id="groupsTab">Groupes</button>
+            </div>
+
+            <div class="contacts-list" id="contactsList">
+                <!-- Les contacts seront ajoutés dynamiquement -->
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="chat-header" id="chatHeader" style="display: none;">
+                <div class="chat-info">
+                    <div class="avatar-container">
+                        <div class="avatar" id="contactAvatar">C</div>
+                        <div class="online-status"></div>
+                    </div>
+                    <div>
+                        <div id="contactName">Contact</div>
+                        <div id="contactStatus" style="font-size: 12px; opacity: 0.8;">En ligne</div>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="menu-btn" onclick="makeCall()" title="Appeler">📞</button>
+                    <button class="menu-btn" onclick="openContactInfo()" title="Infos">ℹ️</button>
+                    <button class="menu-btn" onclick="openChatMenu()" title="Menu">⋮</button>
+                </div>
+            </div>
+
+            <div class="messages-container" id="messagesContainer">
+                <div class="empty-chat">
+                    <h3>Bienvenue sur ChatApp</h3>
+                    <p>Sélectionnez une conversation pour commencer à discuter</p>
+                </div>
+            </div>
+
+            <div class="message-input-container" id="messageInputContainer" style="display: none;">
+                <button class="file-btn" onclick="sendFile()" title="Envoyer un fichier">📎</button>
+                <input type="text" class="message-input" placeholder="Tapez votre message..." id="messageInput">
+                <button class="send-btn" onclick="sendMessage()" title="Envoyer">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Profil -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Mon Profil</h3>
+                <button class="close-btn" onclick="closeModal('profileModal')">&times;</button>
+            </div>
+            <div class="form-group">
+                <label>Nom d'utilisateur</label>
+                <input type="text" id="profileName" placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="profileEmail" placeholder="votre@email.com">
+            </div>
+            <div class="form-group">
+                <label>Statut</label>
+                <input type="text" id="profileStatus" placeholder="Votre statut">
+            </div>
+            <div class="form-group">
+                <label>Photo de profil</label>
+                <input type="file" id="profilePhoto" accept="image/*">
+            </div>
+            <div style="text-align: right; margin-top: 20px;">
+                <button class="btn btn-secondary" onclick="closeModal('profileModal')">Annuler</button>
+                <button class="btn" onclick="saveProfile()">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Paramètres -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Paramètres</h3>
+                <button class="close-btn" onclick="closeModal('settingsModal')">&times;</button>
+            </div>
+            <div class="form-group">
+                <label>Thème</label>
+                <select id="themeSelect">
+                    <option value="light">Clair</option>
+                    <option value="dark">Sombre</option>
+                    <option value="auto">Automatique</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Notifications</label>
+                <div>
+                    <input type="checkbox" id="notifSound" checked> Sons de notification
+                </div>
+                <div>
+                    <input type="checkbox" id="notifDesktop" checked> Notifications bureau
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Confidentialité</label>
+                <div>
+                    <input type="checkbox" id="privacyOnline" checked> Afficher statut en ligne
+                </div>
+                <div>
+                    <input type="checkbox" id="privacyRead" checked> Accusés de lecture
+                </div>
+            </div>
+            <div style="text-align: right; margin-top: 20px;">
+                <button class="btn btn-secondary" onclick="closeModal('settingsModal')">Annuler</button>
+                <button class="btn" onclick="saveSettings()">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nouveau Contact -->
+    <div class="modal" id="newContactModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Nouveau Contact</h3>
+                <button class="close-btn" onclick="closeModal('newContactModal')">&times;</button>
+            </div>
+            <div class="form-group">
+                <label>Nom</label>
+                <input type="text" id="newContactName" placeholder="Nom du contact">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="newContactEmail" placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+                <label>Téléphone</label>
+                <input type="tel" id="newContactPhone" placeholder="+221 77 123 45 67">
+            </div>
+            <div style="text-align: right; margin-top: 20px;">
+                <button class="btn btn-secondary" onclick="closeModal('newContactModal')">Annuler</button>
+                <button class="btn" onclick="addContact()">Ajouter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nouveau Groupe -->
+    <div class="modal" id="newGroupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Nouveau Groupe</h3>
+                <button class="close-btn" onclick="closeModal('newGroupModal')">&times;</button>
+            </div>
+            <div class="form-group">
+                <label>Nom du groupe</label>
+                <input type="text" id="newGroupName" placeholder="Nom du groupe">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="newGroupDescription" placeholder="Description du groupe"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Membres</label>
+                <div class="group-members" id="groupMembers">
+                    <!-- Les contacts seront listés ici -->
+                </div>
+            </div>
+            <div style="text-align: right; margin-top: 20px;">
+                <button class="btn btn-secondary" onclick="closeModal('newGroupModal')">Annuler</button>
+                <button class="btn" onclick="createGroup()">Créer</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Données simulées
+        let currentUser = {
+            id: 1,
+            name: "Utilisateur",
+            email: "user@example.com",
+            status: "En ligne",
+            avatar: "U"
+        };
+
+        let contacts = [
+            {
+                id: 2,
+                name: "Amadou Diallo",
+                email: "amadou@example.com",
+                phone: "+221 77 123 45 67",
+                status: "En ligne",
+                avatar: "A",
+                lastMessage: "Salut, comment ça va ?",
+                lastMessageTime: "14:30",
+                isOnline: true
+            },
+            {
+                id: 3,
+                name: "Fatou Sall",
+                email: "fatou@example.com",
+                phone: "+221 76 987 65 43",
+                status: "Occupé",
+                avatar: "F",
+                lastMessage: "Je t'appelle plus tard",
+                lastMessageTime: "13:45",
+                isOnline: false
+            },
+            {
+                id: 4,
+                name: "Moussa Ba",
+                email: "moussa@example.com",
+                phone: "+221 78 456 78 90",
+                status: "Absent",
+                avatar: "M",
+                lastMessage: "Parfait, à bientôt !",
+                lastMessageTime: "Hier",
+                isOnline: true
+            }
+        ];
+
+        let groups = [
+            {
+                id: 101,
+                name: "Groupe DIC1",
+                description: "Groupe de la promotion DIC1",
+                members: [2, 3, 4],
+                avatar: "G",
+                lastMessage: "Réunion demain à 14h",
+                lastMessageTime: "15:20",
+                isGroup: true
+            },
+            {
+                id: 102,
+                name: "Famille",
+                description: "Groupe familial",
+                members: [2, 3],
+                avatar: "F",
+                lastMessage: "Bonne soirée à tous",
+                lastMessageTime: "19:30",
+                isGroup: true
+            }
+        ];
+
+        let messages = {};
+        let currentChat = null;
+        let currentTab = 'chats';
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            loadContacts();
+            
+            // Event listeners
+            document.getElementById('messageInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+
+            document.getElementById('searchInput').addEventListener('input', function() {
+                searchContacts(this.value);
+            });
+        });
+
+        function initializeApp() {
+            // Initialiser les messages pour chaque contact
+            contacts.forEach(contact => {
+                messages[contact.id] = [
+                    {
+                        id: Date.now(),
+                        sender: contact.id,
+                        content: contact.lastMessage,
+                        timestamp: new Date(),
+                        type: 'text'
+                    }
+                ];
+            });
+
+            // Initialiser les messages pour chaque groupe
+            groups.forEach(group => {
+                messages[group.id] = [
+                    {
+                        id: Date.now(),
+                        sender: group.members[0],
+                        content: group.lastMessage,
+                        timestamp: new Date(),
+                        type: 'text'
+                    }
+                ];
+            });
+
+            // Charger les paramètres utilisateur
+            document.getElementById('userName').textContent = currentUser.name;
+            document.getElementById('userAvatar').textContent = currentUser.avatar;
+        }
+
+        function loadContacts() {
+            const contactsList = document.getElementById('contactsList');
+            contactsList.innerHTML = '';
+
+            if (currentTab === 'chats') {
+                // Charger les discussions récentes
+                const allChats = [...contacts, ...groups];
+                allChats.forEach(contact => {
+                    const contactElement = createContactElement(contact);
+                    contactsList.appendChild(contactElement);
+                });
+            } else if (currentTab === 'contacts') {
+                // Charger tous les contacts
+                contacts.forEach(contact => {
+                    const contactElement = createContactElement(contact);
+                    contactsList.appendChild(contactElement);
+                });
+                
+                // Bouton pour ajouter un nouveau contact
+                const addContactBtn = document.createElement('div');
+                addContactBtn.className = 'contact-item';
+                addContactBtn.innerHTML = `
+                    <div class="avatar">+</div>
+                    <div class="contact-info">
+                        <div class="contact-name">Nouveau Contact</div>
+                        <div class="contact-last-message">Ajouter un nouveau contact</div>
+                    </div>
+                `;
+                addContactBtn.onclick = () => openModal('newContactModal');
+                contactsList.appendChild(addContactBtn);
+            } else if (currentTab === 'groups') {
+                // Charger tous les groupes
+                groups.forEach(group => {
+                    const groupElement = createContactElement(group);
+                    contactsList.appendChild(groupElement);
+                });
+                
+                // Bouton pour créer un nouveau groupe
+                const addGroupBtn = document.createElement('div');
+                addGroupBtn.className = 'contact-item';
+                addGroupBtn.innerHTML = `
+                    <div class="avatar">+</div>
+                    <div class="contact-info">
+                        <div class="contact-name">Nouveau Groupe</div>
+                        <div class="contact-last-message">Créer un nouveau groupe</div>
+                    </div>
+                `;
+                addGroupBtn.onclick = () => openModal('newGroupModal');
+                contactsList.appendChild(addGroupBtn);
+            }
+        }
+
+        function createContactElement(contact) {
+            const contactElement = document.createElement('div');
+            contactElement.className = 'contact-item';
+            contactElement.innerHTML = `
+                <div class="avatar-container">
+                    <div class="avatar">${contact.avatar}</div>
+                    ${contact.isOnline ? '<div class="online-status"></div>' : ''}
+                </div>
+                <div class="contact-info">
+                    <div class="contact-name">${contact.name}</div>
+                    <div class="contact-last-message">${contact.lastMessage || 'Aucun message'}</div>
+                </div>
+                <div class="contact-time">${contact.lastMessageTime || ''}</div>
+            `;
+            
+            contactElement.onclick = () => openChat(contact);
+            return contactElement;
+        }
+
+        function openChat(contact) {
+            currentChat = contact;
+            
+            // Mettre à jour l'interface
+            document.getElementById('chatHeader').style.display = 'flex';
+            document.getElementById('messageInputContainer').style.display = 'flex';
+            document.getElementById('contactName').textContent = contact.name;
+            document.getElementById('contactAvatar').textContent = contact.avatar;
+            document.getElementById('contactStatus').textContent = contact.status || 'En ligne';
+            
+            // Marquer le contact comme actif
+            document.querySelectorAll('.contact-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+            
+            // Charger les messages
+            loadMessages(contact.id);
+        }
+
+        function loadMessages(contactId) {
+            const messagesContainer = document.getElementById('messagesContainer');
+            messagesContainer.innerHTML = '';
+            
+            const chatMessages = messages[contactId] || [];
+            
+            chatMessages.forEach(message => {
+                const messageElement = createMessageElement(message);
+                messagesContainer.appendChild(messageElement);
+            });
+            
+            // Scroll vers le bas
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function createMessageElement(message) {
+            const messageElement = document.createElement('div');
+            const isSent = message.sender === currentUser.id;
+            messageElement.className = `message ${isSent ? 'sent' : 'received'}`;
+            
+            if (message.type === 'file') {
+                messageElement.innerHTML = `
+                    <div class="file-message">
+                        <div class="file-icon">${message.fileType.toUpperCase()}</div>
+                        <div class="file-info">
+                            <div class="file-name">${message.fileName}</div>
+                            <div class="file-size">${message.fileSize}</div>
+                        </div>
+                    </div>
+                    <div class="message-time">${formatTime(message.timestamp)}</div>
+                `;
+            } else {
+                messageElement.innerHTML = `
+                    <div>${message.content}</div>
+                    <div class="message-time">${formatTime(message.timestamp)}</div>
+                `;
+            }
+            
+            return messageElement;
+        }
+
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const content = messageInput.value.trim();
+            
+            if (content && currentChat) {
+                const message = {
+                    id: Date.now(),
+                    sender: currentUser.id,
+                    content: content,
+                    timestamp: new Date(),
+                    type: 'text'
+                };
+                
+                // Ajouter le message aux données
+                if (!messages[currentChat.id]) {
+                    messages[currentChat.id] = [];
+                }
+                messages[currentChat.id].push(message);
+                
+                // Mettre à jour l'interface
+                const messageElement = createMessageElement(message);
+                document.getElementById('messagesContainer').appendChild(messageElement);
+                
+                // Effacer le champ de saisie
+                messageInput.value = '';
+                
+                // Scroll vers le bas
+                const messagesContainer = document.getElementById('messagesContainer');
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                // Simuler une réponse (optionnel)
+                setTimeout(() => {
+                    simulateResponse();
+                }, 1000);
+            }
+        }
+
+        function simulateResponse() {
+            if (currentChat && currentChat.id !== currentUser.id) {
+                const responses = [
+                    "Merci pour votre message !",
+                    "D'accord, je comprends.",
+                    "C'est noté.",
+                    "Parfait !",
+                    "Je vous recontacte bientôt."
+                ];
+                
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                
+                const message = {
+                    id: Date.now(),
+                    sender: currentChat.id,
+                    content: randomResponse,
+                    timestamp: new Date(),
+                    type: 'text'
+                };
+                
+                messages[currentChat.id].push(message);
+                
+                const messageElement = createMessageElement(message);
+                document.getElementById('messagesContainer').appendChild(messageElement);
+                
+                const messagesContainer = document.getElementById('messagesContainer');
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+        }
+
+        function sendFile() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '*/*';
+            input.onchange = function(e) {
+                const file = e.target.files[0];
+                if (file && currentChat) {
+                    const message = {
+                        id: Date.now(),
+                        sender: currentUser.id,
+                        content: `Fichier: ${file.name}`,
+                        timestamp: new Date(),
+                        type: 'file',
+                        fileName: file.name,
+                        fileSize: formatFileSize(file.size),
+                        fileType: file.name.split('.').pop().toUpperCase()
+                    };
+                    
+                    if (!messages[currentChat.id]) {
+                        messages[currentChat.id] = [];
+                    }
+                    messages[currentChat.id].push(message);
+                    
+                    const messageElement = createMessageElement(message);
+                    document.getElementById('messagesContainer').appendChild(messageElement);
+                    
+                    const messagesContainer = document.getElementById('messagesContainer');
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                }
+            };
+            input.click();
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            
+            // Mettre à jour l'interface des onglets
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tab + 'Tab').classList.add('active');
+            
+            // Recharger la liste
+            loadContacts();
+        }
+
+        function searchContacts(query) {
+            const contactItems = document.querySelectorAll('.contact-item');
+            contactItems.forEach(item => {
+                const name = item.querySelector('.contact-name')?.textContent.toLowerCase();
+                const message = item.querySelector('.contact-last-message')?.textContent.toLowerCase();
+                
+                if (name?.includes(query.toLowerCase()) || message?.includes(query.toLowerCase())) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+            
+            // Préparer les données spécifiques aux modales
+            if (modalId === 'profileModal') {
+                document.getElementById('profileName').value = currentUser.name;
+                document.getElementById('profileEmail').value = currentUser.email;
+                document.getElementById('profileStatus').value = currentUser.status;
+            } else if (modalId === 'newGroupModal') {
+                loadGroupMembers();
+            }
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function loadGroupMembers() {
+            const groupMembersDiv = document.getElementById('groupMembers');
+            groupMembersDiv.innerHTML = '';
+            
+            contacts.forEach(contact => {
+                const memberDiv = document.createElement('div');
+                memberDiv.className = 'member-item';
+                memberDiv.innerHTML = `
+                    <input type="checkbox" id="member_${contact.id}" value="${contact.id}">
+                    <div class="avatar">${contact.avatar}</div>
+                    <label for="member_${contact.id}">${contact.name}</label>
+                `;
+                groupMembersDiv.appendChild(memberDiv);
+            });
+        }
+
+        function saveProfile() {
+            const name = document.getElementById('profileName').value;
+            const email = document.getElementById('profileEmail').value;
+            const status = document.getElementById('profileStatus').value;
+            
+            if (name) {
+                currentUser.name = name;
+                currentUser.email = email;
+                currentUser.status = status;
+                
+                // Mettre à jour l'interface
+                document.getElementById('userName').textContent = name;
+                
+                // Simuler la sauvegarde
+                alert('Profil mis à jour avec succès !');
+                closeModal('profileModal');
+            } else {
+                alert('Veuillez remplir au moins le nom d\'utilisateur.');
+            }
+        }
+
+        function saveSettings() {
+            const theme = document.getElementById('themeSelect').value;
+            const notifSound = document.getElementById('notifSound').checked;
+            const notifDesktop = document.getElementById('notifDesktop').checked;
+            const privacyOnline = document.getElementById('privacyOnline').checked;
+            const privacyRead = document.getElementById('privacyRead').checked;
+            
+            // Ici vous pouvez sauvegarder les paramètres
+            console.log('Paramètres sauvegardés:', {
+                theme, notifSound, notifDesktop, privacyOnline, privacyRead
+            });
+            
+            alert('Paramètres sauvegardés avec succès !');
+            closeModal('settingsModal');
+        }
+
+        function addContact() {
+            const name = document.getElementById('newContactName').value;
+            const email = document.getElementById('newContactEmail').value;
+            const phone = document.getElementById('newContactPhone').value;
+            
+            if (name && email) {
+                const newContact = {
+                    id: Date.now(),
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    status: 'Hors ligne',
+                    avatar: name.charAt(0).toUpperCase(),
+                    lastMessage: '',
+                    lastMessageTime: '',
+                    isOnline: false
+                };
+                
+                contacts.push(newContact);
+                messages[newContact.id] = [];
+                
+                // Réinitialiser le formulaire
+                document.getElementById('newContactName').value = '';
+                document.getElementById('newContactEmail').value = '';
+                document.getElementById('newContactPhone').value = '';
+                
+                // Recharger la liste
+                loadContacts();
+                
+                alert('Contact ajouté avec succès !');
+                closeModal('newContactModal');
+            } else {
+                alert('Veuillez remplir au moins le nom et l\'email.');
+            }
+        }
+
+        function createGroup() {
+            const name = document.getElementById('newGroupName').value;
+            const description = document.getElementById('newGroupDescription').value;
+            const selectedMembers = [];
+            
+            document.querySelectorAll('#groupMembers input[type="checkbox"]:checked').forEach(checkbox => {
+                selectedMembers.push(parseInt(checkbox.value));
+            });
+            
+            if (name && selectedMembers.length > 0) {
+                const newGroup = {
+                    id: Date.now(),
+                    name: name,
+                    description: description,
+                    members: selectedMembers,
+                    avatar: name.charAt(0).toUpperCase(),
+                    lastMessage: '',
+                    lastMessageTime: '',
+                    isGroup: true
+                };
+                
+                groups.push(newGroup);
+                messages[newGroup.id] = [];
+                
+                // Réinitialiser le formulaire
+                document.getElementById('newGroupName').value = '';
+                document.getElementById('newGroupDescription').value = '';
+                document.querySelectorAll('#groupMembers input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+                
+                // Recharger la liste
+                loadContacts();
+                
+                alert('Groupe créé avec succès !');
+                closeModal('newGroupModal');
+            } else {
+                alert('Veuillez remplir le nom du groupe et sélectionner au moins un membre.');
+            }
+        }
+
+        function formatTime(timestamp) {
+            const now = new Date();
+            const messageTime = new Date(timestamp);
+            const diffTime = now - messageTime;
+            const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            
+            if (diffDays === 0) {
+                return messageTime.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+            } else if (diffDays === 1) {
+                return 'Hier';
+            } else if (diffDays < 7) {
+                return messageTime.toLocaleDateString('fr-FR', { weekday: 'long' });
+            } else {
+                return messageTime.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' });
+            }
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function makeCall() {
+            if (currentChat) {
+                alert(`Appel en cours vers ${currentChat.name}...`);
+            }
+        }
+
+        function openContactInfo() {
+            if (currentChat) {
+                const info = currentChat.isGroup ? 
+                    `Groupe: ${currentChat.name}\nDescription: ${currentChat.description}\nMembres: ${currentChat.members.length}` :
+                    `Contact: ${currentChat.name}\nEmail: ${currentChat.email}\nTéléphone: ${currentChat.phone}\nStatut: ${currentChat.status}`;
+                
+                alert(info);
+            }
+        }
+
+        function openChatMenu() {
+            const actions = ['Archiver', 'Supprimer', 'Bloquer', 'Signaler'];
+            const action = prompt('Choisissez une action:\n' + actions.map((a, i) => `${i+1}. ${a}`).join('\n'));
+            
+            if (action && action >= 1 && action <= actions.length) {
+                alert(`Action "${actions[action-1]}" sélectionnée pour ${currentChat.name}`);
+            }
+        }
+
+        function openProfileModal() {
+            openModal('profileModal');
+        }
+
+        function openSettingsModal() {
+            openModal('settingsModal');
+        }
+
+        // Gestion des clics en dehors des modales
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+        // Simulation de données XML (structure pour la sauvegarde)
+        function exportToXML() {
+            const xmlData = {
+                users: [currentUser],
+                contacts: contacts,
+                groups: groups,
+                messages: messages,
+                settings: {
+                    theme: document.getElementById('themeSelect')?.value || 'light',
+                    notifications: {
+                        sound: document.getElementById('notifSound')?.checked || true,
+                        desktop: document.getElementById('notifDesktop')?.checked || true
+                    },
+                    privacy: {
+                        online: document.getElementById('privacyOnline')?.checked || true,
+                        read: document.getElementById('privacyRead')?.checked || true
+                    }
+                }
+            };
+            
+            console.log('Données XML à sauvegarder:', xmlData);
+            return xmlData;
+        }
+
+        // Fonction pour charger depuis XML (simulation)
+        function loadFromXML(xmlData) {
+            if (xmlData.users) currentUser = xmlData.users[0];
+            if (xmlData.contacts) contacts = xmlData.contacts;
+            if (xmlData.groups) groups = xmlData.groups;
+            if (xmlData.messages) messages = xmlData.messages;
+            
+            // Réinitialiser l'interface
+            initializeApp();
+            loadContacts();
+        }
+
+        // Sauvegarde automatique (simulation)
+        setInterval(() => {
+            const data = exportToXML();
+            // Ici vous pourriez envoyer les données à un serveur
+            console.log('Sauvegarde automatique des données...');
+        }, 30000); // Sauvegarde toutes les 30 secondes
+    </script>
+</body>
+</html>

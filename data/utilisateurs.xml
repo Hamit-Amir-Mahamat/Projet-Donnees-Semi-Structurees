@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<utilisateurs>
+    <utilisateur>
+        <id>687488c6c76ee</id>
+        <nom_utilisateur>Mahamat Hamit Amir</nom_utilisateur>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <date_inscription>14/07/2025 06:34:14</date_inscription>
+        <statut>actif</statut>
+        <description_active>l'homme de la paix</description_active>
+        <derniere_connexion>2025-07-22 19:06:35</derniere_connexion>
+        <avatar>data/avatars/avatar_687488c6c76ee_1752527524.jpeg</avatar>
+        
+    <descriptions><description>l'homme de la paix</description></descriptions></utilisateur>
+    <utilisateur>
+        <id>68748b00ae7d0</id>
+        <nom_utilisateur>Aziz Sy</nom_utilisateur>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <date_inscription>14/07/2025 06:43:44</date_inscription>
+        <statut>actif</statut>
+        
+        <description_active>Il n'y a de divinité digne d'être adoré si ce n'est qu'ALLAH.</description_active>
+        
+        <derniere_connexion>2025-07-14 23:49:00</derniere_connexion>
+    <avatar>data/avatars/avatar_68748b00ae7d0_1752536895.jpg</avatar><descriptions><description>Il n'y a de divinité digne d'être adoré si ce n'est qu'ALLAH.</description></descriptions></utilisateur>
+    <utilisateur>
+        <id>68748ea611176</id>
+        <nom_utilisateur>Hamid Diallo</nom_utilisateur>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <date_inscription>14/07/2025 06:59:18</date_inscription>
+        <statut>actif</statut>
+        <descriptions>
+            <description>Musicien amateur</description>
+        </descriptions>
+        <description_active>Musicien amateur</description_active>
+        <derniere_connexion>2025-07-14 14:04:09</derniere_connexion>
+    </utilisateur>
+    <utilisateur>
+        <id>6875053bddbaf</id>
+        <nom_utilisateur>Ousmane Ali Brahim</nom_utilisateur>
+        <nom_complet>Ousmane Ali Brahim</nom_complet>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <avatar>O</avatar>
+        <statut>Nouveau membre</statut>
+        <date_creation>2025-07-14 15:25:16</date_creation>
+        <descriptions>
+            <description>Voyageur</description>
+        </descriptions>
+        <description_active>Voyageur</description_active>
+        <derniere_connexion>2025-07-14 17:19:32</derniere_connexion>
+        <actif>1</actif>
+    </utilisateur>
+    <utilisateur>
+        <id>68751eedae652</id>
+        <nom_utilisateur>Hamit</nom_utilisateur>
+        <nom_complet>Hamit</nom_complet>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <avatar>H</avatar>
+        <statut>Nouveau membre</statut>
+        <date_creation>2025-07-14 17:14:53</date_creation>
+        <descriptions>
+            <description>Gamer</description>
+        </descriptions>
+        <description_active>Gamer</description_active>
+        <derniere_connexion>2025-07-22 15:24:04</derniere_connexion>
+        <actif>1</actif>
+    </utilisateur>
+    <utilisateur>
+        <id>isaac12345</id>
+        <nom_utilisateur>Isaac</nom_utilisateur>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <date_inscription>15/07/2025 00:00:00</date_inscription>
+        <statut>actif</statut>
+        <descriptions>
+            <description>Utilisateur actif et enthousiaste</description>
+        </descriptions>
+        <description_active>Utilisateur actif et enthousiaste</description_active>
+    <derniere_connexion>2025-07-22 15:21:08</derniere_connexion></utilisateur>
+    <utilisateur>
+        <id>bonco12345</id>
+        <nom_utilisateur>Bonco</nom_utilisateur>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <date_inscription>15/07/2025 00:00:00</date_inscription>
+        <statut>actif</statut>
+        <descriptions>
+            <description>Passionné par la technologie</description>
+        </descriptions>
+        <description_active>Passionné par la technologie</description_active>
+    <derniere_connexion>2025-07-15 18:26:33</derniere_connexion></utilisateur>
+    <utilisateur>
+        <id>aicha12345</id>
+        <nom_utilisateur>Aicha</nom_utilisateur>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <date_inscription>15/07/2025 00:00:00</date_inscription>
+        <statut>actif</statut>
+        <descriptions>
+            <description>Amatrice de lecture et d'écriture</description>
+        </descriptions>
+        <description_active>Amatrice de lecture et d'écriture</description_active>
+    <derniere_connexion>2025-07-22 18:19:50</derniere_connexion></utilisateur>
+    <utilisateur>
+        <id>boubakar12345</id>
+        <nom_utilisateur>Boubakar</nom_utilisateur>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <date_inscription>15/07/2025 00:00:00</date_inscription>
+        <statut>actif</statut>
+        <descriptions>
+            <description>Aventurier et explorateur</description>
+        </descriptions>
+        <description_active>Aventurier et explorateur</description_active>
+    </utilisateur>
+    <utilisateur>
+        <id>ibrahima12345</id>
+        <nom_utilisateur>Ibrahima FALL</nom_utilisateur>
+        <mot_de_passe>$2y$10$AQ6GcyS72pDQa5wEInufP.m82NK8AG9mqysgtGDrOReU7uT7XhAl2</mot_de_passe>
+        <date_inscription>15/07/2025 00:00:00</date_inscription>
+        <statut>actif</statut>
+        
+        <description_active>Professeur Titulaire des Universités</description_active>
+    <avatar>data/avatars/avatar_ibrahima12345_1752538501.jpeg</avatar><descriptions><description>Professeur Titulaire des Universités</description></descriptions><derniere_connexion>2025-07-15 18:24:39</derniere_connexion></utilisateur>
+<utilisateur><id>687dcda81ffaf</id><nom_utilisateur>Isaac Memini Edou</nom_utilisateur><nom_complet>Isaac Memini Edou</nom_complet><mot_de_passe>$2y$10$qlLg0fOnpYhrSWasXZPdQeymomyeH5gmSiw8yKybtkL2tbf06DSOa</mot_de_passe><statut>Nouveau membre</statut><date_creation>2025-07-21 07:18:32</date_creation><derniere_connexion>2025-07-21 22:36:39</derniere_connexion><actif>1</actif><descriptions><description>beau gosse</description></descriptions><description_active>beau gosse</description_active></utilisateur><utilisateur><id>687ddc7c88940</id><nom_utilisateur>Hamid</nom_utilisateur><nom_complet>Hamid</nom_complet><mot_de_passe>$2y$10$5nwS8wVfbvKnMA5gKKfYP.8tqQLVp2CCWOp8DfJx1tbveybCO/6RC</mot_de_passe><avatar>H</avatar><statut>Nouveau membre</statut><date_creation>2025-07-21 08:21:48</date_creation><derniere_connexion>2025-07-21 08:23:36</derniere_connexion><actif>1</actif></utilisateur><utilisateur><id>687e13cc7b094</id><nom_utilisateur>Pape Saliou Wade</nom_utilisateur><nom_complet>Pape Saliou Wade</nom_complet><mot_de_passe>$2y$10$p5IcvuTCVC91Ksk6BXokCOeHQABBcs71os34CE1QxIU2fsu962ISm</mot_de_passe><avatar>P</avatar><statut>Nouveau membre</statut><date_creation>2025-07-21 12:17:48</date_creation><derniere_connexion>2025-07-21 12:19:39</derniere_connexion><actif>1</actif></utilisateur><utilisateur><id>687fac3131158</id><nom_utilisateur>Brahim</nom_utilisateur><nom_complet>Brahim</nom_complet><mot_de_passe>$2y$10$tHJAvBkKTbiSGOzJmLEfn.oy6qp4/kxxTOuopAhXZO5.jlGqhNB3C</mot_de_passe><avatar>B</avatar><statut>Nouveau membre</statut><date_creation>2025-07-22 17:20:17</date_creation><derniere_connexion>2025-07-22 17:20:17</derniere_connexion><actif>1</actif></utilisateur></utilisateurs>

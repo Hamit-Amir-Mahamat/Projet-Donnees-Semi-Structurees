@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groupes>
+    <groupe>
+        <id>group_6875092b24b9f</id>
+        <nom>exercice_xml</nom>
+        <description>groupe pour le travail en xml</description>
+        <createur_id>68748b00ae7d0</createur_id>
+        <date_creation>2025-07-14 15:42:03</date_creation>
+        <avatar>E</avatar>
+        <membres>
+            <membre>
+                <user_id>68748b00ae7d0</user_id>
+                <role>admin</role>
+                <date_ajout>2025-07-14 15:42:03</date_ajout>
+            </membre>
+            <membre>
+                <user_id>687488c6c76ee</user_id>
+                <role>membre</role>
+                <date_ajout>2025-07-14 15:42:03</date_ajout>
+            </membre>
+            <membre>
+                <user_id>68748ea611176</user_id>
+                <role>membre</role>
+                <date_ajout>2025-07-14 15:42:03</date_ajout>
+            </membre>
+            <membre>
+                <user_id>6875053bddbaf</user_id>
+                <role>membre</role>
+                <date_ajout>2025-07-14 15:42:03</date_ajout>
+            </membre>
+        </membres>
+    </groupe>
+    <groupe>
+        <id>group_68751f8e3d111</id>
+        <nom>Team Element</nom>
+        <description>groupe de travail</description>
+        <createur_id>687488c6c76ee</createur_id>
+        <date_creation>2025-07-14 17:17:34</date_creation>
+        <avatar>T</avatar>
+        <membres>
+            <membre>
+                <user_id>687488c6c76ee</user_id>
+                <role>admin</role>
+                <date_ajout>2025-07-14 17:17:34</date_ajout>
+            </membre>
+            <membre>
+                <user_id>68748ea611176</user_id>
+                <role>membre</role>
+                <date_ajout>2025-07-14 17:17:34</date_ajout>
+            </membre>
+            <membre>
+                <user_id>6875053bddbaf</user_id>
+                <role>membre</role>
+                <date_ajout>2025-07-14 17:17:34</date_ajout>
+            </membre>
+            <membre>
+                <user_id>68751eedae652</user_id>
+                <role>membre</role>
+                <date_ajout>2025-07-14 17:17:34</date_ajout>
+            </membre>
+        </membres>
+    </groupe>
+    <groupe>
+        <id>group_68758f7cac49a</id>
+        <nom>Exposé Réseaux Mobiles</nom>
+        <description/>
+        <createur_id>68748b00ae7d0</createur_id>
+        <date_creation>2025-07-15 01:15:08</date_creation>
+        <avatar>E</avatar>
+        <membres>
+            <membre>
+                <user_id>68748b00ae7d0</user_id>
+                <role>admin</role>
+                <date_ajout>2025-07-15 01:15:08</date_ajout>
+            </membre>
+            <membre>
+                <user_id>68751eedae652</user_id>
+                <role>membre</role>
+                <date_ajout>2025-07-15 01:15:08</date_ajout>
+            </membre>
+        </membres>
+    </groupe>
+<groupe><id>group_687fc5fbe2188</id><nom>groupe de revision</nom><description>revision pour les ds</description><createur_id>687488c6c76ee</createur_id><date_creation>2025-07-22 19:10:19</date_creation><avatar>G</avatar><membres><membre><user_id>687488c6c76ee</user_id><role>admin</role><date_ajout>2025-07-22 19:10:19</date_ajout></membre><membre><user_id>68748b00ae7d0</user_id><role>membre</role><date_ajout>2025-07-22 19:10:19</date_ajout></membre><membre><user_id>6875053bddbaf</user_id><role>membre</role><date_ajout>2025-07-22 19:10:19</date_ajout></membre></membres></groupe></groupes>

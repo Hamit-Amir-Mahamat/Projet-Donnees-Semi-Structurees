@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+    <message>
+        <id>6874f691db417</id>
+        <sender_id>687488c6c76ee</sender_id>
+        <recipient_id>68748b00ae7d0</recipient_id>
+        <content>salut mec quoi de neuf</content>
+        <timestamp>2025-07-14 14:22:41</timestamp>
+        <status>read</status>
+    </message>
+    <message>
+        <id>6874f6a93c834</id>
+        <sender_id>68748b00ae7d0</sender_id>
+        <recipient_id>687488c6c76ee</recipient_id>
+        <content>bien et toi j'ai la flemme mon gars</content>
+        <timestamp>2025-07-14 14:23:05</timestamp>
+        <status>read</status>
+    </message>
+    <message>
+        <id>6874ff6a1fcba</id>
+        <sender_id>687488c6c76ee</sender_id>
+        <recipient_id>68748b00ae7d0</recipient_id>
+        <content>qu'est ce que tu fais</content>
+        <timestamp>2025-07-14 15:00:26</timestamp>
+        <status>read</status>
+    </message>
+    <message>
+        <id>6874ff817c207</id>
+        <sender_id>68748b00ae7d0</sender_id>
+        <recipient_id>687488c6c76ee</recipient_id>
+        <content>je dors</content>
+        <timestamp>2025-07-14 15:00:49</timestamp>
+        <status>read</status>
+    </message>
+    <message>
+        <id>6875059605ad0</id>
+        <sender_id>6875053bddbaf</sender_id>
+        <recipient_id>687488c6c76ee</recipient_id>
+        <content>salut mec quoi de neuf</content>
+        <timestamp>2025-07-14 15:26:46</timestamp>
+        <status>read</status>
+    </message>
+    <message>
+        <id>687505ab01349</id>
+        <sender_id>6875053bddbaf</sender_id>
+        <recipient_id>68748b00ae7d0</recipient_id>
+        <content>aziz qu'est ce que tu fais</content>
+        <timestamp>2025-07-14 15:27:07</timestamp>
+        <status>read</status>
+    </message>
+    <message>
+        <id>687509447ea4b</id>
+        <sender_id>68748b00ae7d0</sender_id>
+        <recipient_id>group_6875092b24b9f</recipient_id>
+        <content>salut les gars quoi de neuf qu'est ce que vous faites</content>
+        <timestamp>2025-07-14 15:42:28</timestamp>
+        <status>sent</status>
+        <is_group>1</is_group>
+    </message>
+    <message>
+        <id>68750b1c6330c</id>
+        <sender_id>68748b00ae7d0</sender_id>
+        <recipient_id>687488c6c76ee</recipient_id>
+        <content>salut</content>
+        <timestamp>2025-07-14 15:50:20</timestamp>
+        <status>read</status>
+        <is_group>0</is_group>
+    </message>
+    <message>
+        <id>68750b712ed81</id>
+        <sender_id>68748b00ae7d0</sender_id>
+        <recipient_id>687488c6c76ee</recipient_id>
+        <content>t</content>
+        <timestamp>2025-07-14 15:51:45</timestamp>
+        <status>read</status>
+        <is_group>0</is_group>
+    </message>
+    <message>
+        <id>68750eaa5d5a1</id>
+        <sender_id>687488c6c76ee</sender_id>
+        <recipient_id>68748ea611176</recipient_id>
+        <content>quoi de neuf mon pote</content>
+        <timestamp>2025-07-14 16:05:30</timestamp>
+        <status>sent</status>
+        <is_group>0</is_group>
+    </message>
+    <message>
+        <id>68750ec204bd8</id>
+        <sender_id>68748ea611176</sender_id>
+        <recipient_id>687488c6c76ee</recipient_id>
+        <content>boys tu fais quoi ??</content>
+        <timestamp>2025-07-14 16:05:54</timestamp>
+        <status>read</status>
+        <is_group>0</is_group>
+    </message>
+    <message>
+        <id>68751449a3e7a</id>
+        <sender_id>687488c6c76ee</sender_id>
+        <recipient_id>group_6875092b24b9f</recipient_id>
+        <content>yo les gars qu'est ce que vous faites</content>
+        <timestamp>2025-07-14 16:29:29</timestamp>
+        <status>sent</status>
+        <is_group>1</is_group>
+    </message><message><id>68751f3d91d29</id><sender_id>687488c6c76ee</sender_id><recipient_id>68751eedae652</recipient_id><content>salut Hamit quoi de neuf</content><timestamp>2025-07-14 17:16:13</timestamp><status>read</status><is_group>0</is_group></message><message><id>68751f56847c9</id><sender_id>68751eedae652</sender_id><recipient_id>687488c6c76ee</recipient_id><content>je vais bien Isaac et toi</content><timestamp>2025-07-14 17:16:38</timestamp><status>read</status><is_group>0</is_group></message><message><id>68751f9a25c8c</id><sender_id>687488c6c76ee</sender_id><recipient_id>group_68751f8e3d111</recipient_id><content>salut l'equipe</content><timestamp>2025-07-14 17:17:46</timestamp><status>sent</status><is_group>1</is_group></message><message><id>687520112d2e4</id><sender_id>6875053bddbaf</sender_id><recipient_id>group_68751f8e3d111</recipient_id><content>moi aussi je parle</content><timestamp>2025-07-14 17:19:45</timestamp><status>sent</status><is_group>1</is_group></message><message><id>6875282a636e2</id><sender_id>687488c6c76ee</sender_id><recipient_id>6875053bddbaf</recipient_id><content>Bonsoir</content><timestamp>2025-07-14 17:54:18</timestamp><status>sent</status><is_group>0</is_group></message><message><id>687555d614108</id><sender_id>687488c6c76ee</sender_id><recipient_id>6875053bddbaf</recipient_id><content>bonsoir</content><timestamp>2025-07-14 21:09:10</timestamp><status>sent</status><is_group>0</is_group></message><message><id>687555f1216fc</id><sender_id>687488c6c76ee</sender_id><recipient_id>6875053bddbaf</recipient_id><content>je vous remercie</content><timestamp>2025-07-14 21:09:37</timestamp><status>sent</status><is_group>0</is_group></message><message><id>687557b525d46</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>bonjour</content><timestamp>2025-07-14 21:17:09</timestamp><status>read</status><is_group>0</is_group></message><message><id>687559e3e5f8c</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Bonjour</content><timestamp>2025-07-14 21:26:27</timestamp><status>read</status><is_group>0</is_group></message><message><id>68755b73e0519</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Bonsoir</content><timestamp>2025-07-14 21:33:07</timestamp><status>read</status><is_group>0</is_group></message><message><id>68755b8508f69</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Bonjour</content><timestamp>2025-07-14 21:33:25</timestamp><status>read</status><is_group>0</is_group></message><message><id>68755bb583c09</id><sender_id>68748b00ae7d0</sender_id><recipient_id>group_6875092b24b9f</recipient_id><content>Bonjour frère comment vas tu ?</content><timestamp>2025-07-14 21:34:13</timestamp><status>sent</status><is_group>1</is_group></message><message><id>68755bdfc923c</id><sender_id>687488c6c76ee</sender_id><recipient_id>group_6875092b24b9f</recipient_id><content>Bonjour frère comment vas tu ?</content><timestamp>2025-07-14 21:34:55</timestamp><status>sent</status><is_group>1</is_group></message><message><id>68755becb675d</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Bonjour frère comment vas tu ?</content><timestamp>2025-07-14 21:35:08</timestamp><status>read</status><is_group>0</is_group></message><message><id>68755cd29417c</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Bonjour</content><timestamp>2025-07-14 21:38:58</timestamp><status>read</status><is_group>0</is_group></message><message><id>68755d7771e34</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Bonjour MAhamat</content><timestamp>2025-07-14 21:41:43</timestamp><status>read</status><is_group>0</is_group></message><message><id>6875727b85fc8</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Bonsoir</content><timestamp>2025-07-14 23:11:23</timestamp><status>read</status><is_group>0</is_group></message><message><id>68757322a59dc</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Allo</content><timestamp>2025-07-14 23:14:10</timestamp><status>read</status><is_group>0</is_group></message><message><id>687573bc47a70</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Hello everybody !</content><timestamp>2025-07-14 23:16:44</timestamp><status>read</status><is_group>0</is_group></message><message><id>6875743cde5d2</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Bonjour 🤝 !</content><timestamp>2025-07-14 23:18:52</timestamp><status>read</status><is_group>0</is_group></message><message><id>687574c77b882</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Allo !</content><timestamp>2025-07-14 23:21:11</timestamp><status>read</status><is_group>0</is_group></message><message><id>68757552bff73</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Hellp word :</content><timestamp>2025-07-14 23:23:30</timestamp><status>read</status><is_group>0</is_group></message><message><id>6875778b7358c</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>L'homme de la paix ✌</content><timestamp>2025-07-14 23:32:59</timestamp><status>read</status><is_group>0</is_group></message><message><id>687577f8139eb</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Mahamat Comment te porte tu  ?</content><timestamp>2025-07-14 23:34:48</timestamp><status>read</status><is_group>0</is_group></message><message><id>687578081bb37</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Je vais mon frère et toi ?</content><timestamp>2025-07-14 23:35:04</timestamp><status>read</status><is_group>0</is_group></message><message><id>687578511431b</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>je vais bien également.</content><timestamp>2025-07-14 23:36:17</timestamp><status>read</status><is_group>0</is_group></message><message><id>68757a1a898fd</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>hello le homme</content><timestamp>2025-07-14 23:43:54</timestamp><status>read</status><is_group>0</is_group></message><message><id>68757af6d3f42</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>bonjour monsieur !</content><timestamp>2025-07-14 23:47:34</timestamp><status>read</status><is_group>0</is_group></message><message><id>68757b6db568b</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>oui Bonjour Sure !</content><timestamp>2025-07-14 23:49:33</timestamp><status>read</status><is_group>0</is_group></message><message><id>68757cc4d4c72</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Bonjour !</content><timestamp>2025-07-14 23:55:16</timestamp><status>read</status><is_group>0</is_group></message><message><id>68757e7649ba1</id><sender_id>687488c6c76ee</sender_id><recipient_id>group_6875092b24b9f</recipient_id><content>Hay !</content><timestamp>2025-07-15 00:02:30</timestamp><status>sent</status><is_group>1</is_group></message><message><id>68757ec22a4b3</id><sender_id>687488c6c76ee</sender_id><recipient_id>group_6875092b24b9f</recipient_id><content>Je vous remercie de ma part 🍕</content><timestamp>2025-07-15 00:03:46</timestamp><status>sent</status><is_group>1</is_group></message><message><id>68757f5ab7b97</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Rick !</content><timestamp>2025-07-15 00:06:18</timestamp><status>read</status><is_group>0</is_group></message><message><id>687581982b104</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>&lt;a href="data/files/file_687581982aab7_1752531352.jpeg" target="_blank"&gt;📎 Fichier&lt;/a&gt;</content><timestamp>2025-07-15 00:15:52</timestamp><status>read</status><is_group>0</is_group></message><message><id>68758243eab48</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Pourquoi ?&lt;br&gt;&lt;a href="data/files/file_68758243ea3d7_1752531523.txt" target="_blank"&gt;📎 Fichier&lt;/a&gt;</content><timestamp>2025-07-15 00:18:43</timestamp><status>read</status><is_group>0</is_group></message><message><id>687584b631445</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>&lt;a href="data/files/file_687584b6308a9_1752532150.txt" target="_blank" data-original-name="Projet xml.txt"&gt;📎 Fichier&lt;/a&gt;</content><timestamp>2025-07-15 00:29:10</timestamp><status>read</status><is_group>0</is_group></message><message><id>687585d06b698</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>&lt;a href="data/files/file_687585d06a97d_1752532432.txt" target="_blank" data-original-name="DMD.txt"&gt;📎 Fichier&lt;/a&gt;</content><timestamp>2025-07-15 00:33:52</timestamp><status>read</status><is_group>0</is_group></message><message><id>68758781e4ca3</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>&lt;a href="data/files/file_68758781e4284_1752532865.txt" target="_blank" data-original-name="DMD.txt"&gt;📎 Fichier&lt;/a&gt;</content><timestamp>2025-07-15 00:41:05</timestamp><status>read</status><is_group>0</is_group></message><message><id>687588338e40c</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>&lt;a href="data/files/file_687588338dc29_1752533043.pdf" target="_blank" data-original-name="Plaquette - M1 Management de l'innovation- Univ Picardie France.pdf"&gt;📎 Fichier&lt;/a&gt;</content><timestamp>2025-07-15 00:44:03</timestamp><status>read</status><is_group>0</is_group></message><message><id>68758905af05e</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Ceci est un fichier confidentiel.&lt;br&gt;&lt;a href="data/files/file_68758905adec7_1752533253.pdf" target="_blank" data-original-name="Fiche-Contrat-Master_Pro_ENSAI-2025-2026.pdf"&gt;📎 Fichier&lt;/a&gt;</content><timestamp>2025-07-15 00:47:33</timestamp><status>read</status><is_group>0</is_group></message><message><id>6875893e0ccd3</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>&lt;a href="data/files/file_6875893e0c3e5_1752533310.html" target="_blank" data-original-name="Whatsapp.html"&gt;📎 Fichier&lt;/a&gt;</content><timestamp>2025-07-15 00:48:30</timestamp><status>read</status><is_group>0</is_group></message><message><id>68758fa4dbca2</id><sender_id>687488c6c76ee</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Bonjour !</content><timestamp>2025-07-15 01:15:48</timestamp><status>read</status><is_group>0</is_group></message><message><id>68758fbcea06f</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Allo !</content><timestamp>2025-07-15 01:16:12</timestamp><status>read</status><is_group>0</is_group></message><message><id>6875903875caa</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Bonsoir !</content><timestamp>2025-07-15 01:18:16</timestamp><status>read</status><is_group>0</is_group></message><message><id>6875905d57621</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>hello !</content><timestamp>2025-07-15 01:18:53</timestamp><status>read</status><is_group>0</is_group></message><message><id>6875908ec4c20</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Gardez-vous la tête haute !</content><timestamp>2025-07-15 01:19:42</timestamp><status>read</status><is_group>0</is_group></message><message><id>687590b47966f</id><sender_id>687488c6c76ee</sender_id><recipient_id>group_6875092b24b9f</recipient_id><content>bonjour !</content><timestamp>2025-07-15 01:20:20</timestamp><status>sent</status><is_group>1</is_group></message><message><id>68759b31e8006</id><sender_id>68748b00ae7d0</sender_id><recipient_id>687488c6c76ee</recipient_id><content>ALLO LA FAMILLE !</content><timestamp>2025-07-15 02:05:05</timestamp><status>read</status><is_group>0</is_group></message><message><id>68759dad088f6</id><sender_id>687488c6c76ee</sender_id><recipient_id>ibrahima12345</recipient_id><content>Bonsoir cher professeur j'espère que vous allez bien ?</content><timestamp>2025-07-15 02:15:41</timestamp><status>read</status><is_group>0</is_group></message><message><id>68762a1a34090</id><sender_id>aicha12345</sender_id><recipient_id>ibrahima12345</recipient_id><content>Bonjour monsieur le chef de département !</content><timestamp>2025-07-15 12:14:50</timestamp><status>read</status><is_group>0</is_group></message><message><id>687680d19f3d2</id><sender_id>ibrahima12345</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Bonjour !</content><timestamp>2025-07-15 18:24:49</timestamp><status>read</status><is_group>0</is_group></message><message><id>687680e31ad69</id><sender_id>ibrahima12345</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Allo Mahamat !</content><timestamp>2025-07-15 18:25:07</timestamp><status>sent</status><is_group>0</is_group></message><message><id>6876820ead411</id><sender_id>ibrahima12345</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>Allo !</content><timestamp>2025-07-15 18:30:06</timestamp><status>sent</status><is_group>0</is_group></message><message><id>6876847737242</id><sender_id>ibrahima12345</sender_id><recipient_id>bonco12345</recipient_id><content>bonjour</content><timestamp>2025-07-15 18:40:23</timestamp><status>sent</status><is_group>0</is_group></message><message><id>68768483b423e</id><sender_id>ibrahima12345</sender_id><recipient_id>687488c6c76ee</recipient_id><content>Allo !</content><timestamp>2025-07-15 18:40:35</timestamp><status>read</status><is_group>0</is_group></message><message><id>687685789c9ca</id><sender_id>ibrahima12345</sender_id><recipient_id>68748ea611176</recipient_id><content>Allo !</content><timestamp>2025-07-15 18:44:40</timestamp><status>sent</status><is_group>0</is_group></message><message><id>687dce345c34f</id><sender_id>687dcda81ffaf</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>salut Mon pote</content><timestamp>2025-07-21 07:20:52</timestamp><status>sent</status><is_group>0</is_group></message><message><id>687ddd52ea5e0</id><sender_id>687ddc7c88940</sender_id><recipient_id>687dcda81ffaf</recipient_id><content>salut mon pote</content><timestamp>2025-07-21 08:25:22</timestamp><status>read</status><is_group>0</is_group></message><message><id>687f90a558ce0</id><sender_id>isaac12345</sender_id><recipient_id>68751eedae652</recipient_id><content>salut</content><timestamp>2025-07-22 15:22:45</timestamp><status>read</status><is_group>0</is_group></message><message><id>687fac6767ec6</id><sender_id>687fac3131158</sender_id><recipient_id>68748b00ae7d0</recipient_id><content>salut</content><timestamp>2025-07-22 17:21:11</timestamp><status>sent</status><is_group>0</is_group></message><message><id>687fc52cc17ab</id><sender_id>687488c6c76ee</sender_id><recipient_id>aicha12345</recipient_id><content>salut Aicha</content><timestamp>2025-07-22 19:06:52</timestamp><status>read</status><is_group>0</is_group></message><message><id>687fc5464fd62</id><sender_id>aicha12345</sender_id><recipient_id>687488c6c76ee</recipient_id><content>salut Hamit comment vas-tu ???</content><timestamp>2025-07-22 19:07:18</timestamp><status>read</status><is_group>0</is_group></message><message><id>687fc60fc64f6</id><sender_id>687488c6c76ee</sender_id><recipient_id>group_687fc5fbe2188</recipient_id><content>salut j'ai creer ce groupe pour  les revisions</content><timestamp>2025-07-22 19:10:39</timestamp><status>sent</status><is_group>1</is_group></message></messages>
